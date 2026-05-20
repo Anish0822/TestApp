@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="repository"
+            type="com.app.testapp.api.response.GitHubUserListResponseItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/margin_8"
+        app:cardElevation="@dimen/margin_4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_16">
+
+            <ImageView
+                android:id="@+id/icRepository"
+                android:layout_width="@dimen/margin_24"
+                android:layout_height="@dimen/margin_24"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_search" />
+
+            <TextView
+                android:id="@+id/tvRepositoryName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_toStartOf="@id/starCountContainer"
+                android:layout_toEndOf="@id/icRepository"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{repository.name}"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold"
+                tools:text="Repo" />
+
+            <TextView
+                android:id="@+id/tvRepositoryDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRepositoryName"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_toStartOf="@id/starCountContainer"
+                android:layout_toEndOf="@id/icRepository"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:text="@{repository.description}"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/font_14"
+                tools:text="Description Description Description Description Description" />
+
+            <LinearLayout
+                android:id="@+id/starCountContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icStar"
+                    android:layout_width="@dimen/margin_16"
+                    android:layout_height="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_4"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_search" />
+
+                <TextView
+                    android:id="@+id/tvStars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:text="@{String.valueOf(repository.stargazersCount)}"
+                    android:textSize="@dimen/font_14"
+                    android:textStyle="bold"
+                    tools:text="60" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

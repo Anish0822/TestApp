@@ -24,6 +24,9 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
     private var originalRepositories: List<GitHubUserListResponseItem>? = null
 
     fun fetchRepositories() {
+        if (!repositories.value.isNullOrEmpty()) {
+            return
+        }
         navigator?.showProgressDialog()
         viewModelScope.launch {
             val result = repository.getUserRepositories()

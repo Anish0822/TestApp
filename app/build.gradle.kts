@@ -79,4 +79,9 @@ dependencies {
 
     //For Custom Progress Dialog
     implementation(libs.avloadingindicatorview)
+
+    //coroutine
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.kotlinx.coroutines.core)
 }

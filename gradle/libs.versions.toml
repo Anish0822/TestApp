@@ -18,6 +18,8 @@ kotlin = "2.0.20"
 googleGmsGoogleServices = "4.4.4"
 avloadingindicatorview = "2.1.4"
 firebaseMessaging = "25.0.2"
+kotlinxCoroutinesAndroid = "1.7.3"
+lifecycleViewmodelKtx = "2.8.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,6 +40,9 @@ compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 avloadingindicatorview = { module = "io.github.maitrungduc1410:AVLoadingIndicatorView", version.ref = "avloadingindicatorview" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesAndroid" }
 
 
 [plugins]

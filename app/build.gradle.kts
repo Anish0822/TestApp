@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -72,6 +73,9 @@ dependencies {
     // Glide
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
+
+    //Firebase
+    implementation(libs.firebase.messaging)
 
     //For Custom Progress Dialog
     implementation(libs.avloadingindicatorview)

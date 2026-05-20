@@ -72,7 +72,6 @@
                 android:padding="@dimen/margin_8"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_arrow_search"
-                android:visibility="gone"
                 tools:ignore="ContentDescription"
                 tools:visibility="visible" />
 
